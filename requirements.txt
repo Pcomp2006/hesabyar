@@ -1,0 +1,8 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+python-multipart>=0.0.6
+jdatetime>=4.0.0
+pywebview>=5.0
+a2wsgi>=1.10.0
+pygame>=2.5.0
+# Taraz engine is bundled inside the project (zero external deps)

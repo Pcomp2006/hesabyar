@@ -1,0 +1,45 @@
+CluDari — Outside home (remote access)
+======================================
+
+Cloudflare Tunnel is often BLOCKED in Iran (port 7844).
+Best free option for you: Tailscale.
+
+--- A) Same Wi-Fi (home only) ---
+  http://YOUR-PC-IP:8000
+
+--- B) Outside home: Tailscale (recommended) ---
+1. On the CENTRAL PC:
+   - Download Tailscale: https://tailscale.com/download
+   - Install, sign in (Google/Microsoft/GitHub account OK)
+2. On phone / laptop outside:
+   - Install Tailscale, sign in with SAME account
+3. In Tailscale admin or app, copy the central PC IP
+   (looks like 100.x.x.x)
+4. Open browser:
+   http://100.x.x.x:8000
+5. Login with same CluDari user (e.g. root or Parham)
+
+Notes:
+- Central PC must be ON and CluDari server running
+- Tailscale is free for personal use
+- No need to open router ports
+- Works on mobile data
+
+--- C) VPN on central PC + Cloudflare ---
+  Only if you have a working VPN that unblocks
+  Cloudflare edge ports — usually harder.
+
+--- D) Auto-start server when Windows boots ---
+  Run once:  install-autostart.bat
+  Server starts hidden after login.
+
+  Hidden start now:  run-server-hidden.bat
+  Remove autostart:  uninstall-autostart.bat
+
+Stop hidden server:
+  Task Manager → Details → python.exe (CluDari) → End task
+  Or reboot.
+
+NOTE (Kaspersky / antivirus):
+  Do NOT use .vbs scripts. Use run-server-hidden.bat only.
+  If antivirus blocks python, add an exclusion for the CluDari folder.
